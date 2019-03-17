@@ -353,17 +353,18 @@ sudo nano /etc/apache2/sites-available/catalog.conf
 
 </VirtualHost> 
 ```
-* Enable the site:
-
-```
-sudo a2ensite catalog
-```
 
 * Setup the database :
 
 ```
 python /var/www/catalog/catalog/database_setup.py 
 python /var/www/catalog/catalog/model.py 
+```
+
+* Enable the site:
+
+```
+sudo a2ensite catalog
 ```
 
 * Restart the apache server:
@@ -375,6 +376,7 @@ sudo service apache2 restart
 * Visit site at : 
   * http://ec2-52-47-194-202.eu-west-3.compute.amazonaws.com/ 
   * http://52.47.194.202/
+  
 ## Authors
 
 * **Mohamed BOUSETTA MAHJOUB** - *Initial work* - [MedMahj](https://github.com/MedMahj/)
