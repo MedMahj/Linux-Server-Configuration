@@ -1,4 +1,4 @@
-# Linux Server Configuration Project - Udacity FSWD Nanodegree
+# Linux Server Configuration Project 
 
 ## Description 
 
