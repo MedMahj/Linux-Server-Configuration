@@ -152,11 +152,6 @@ sudo ufw allow 2200/tcp
 sudo ufw enable
 ```
 
-* Exit `ssh` session:
-
-```
-exit
-```
 ### Allow connection to UFW ports for Lightsail instance
 
 * Log in to your Lightsail dashboard
@@ -285,7 +280,7 @@ cd catalog
 ```
 sudo git clone https://github.com/MedMahj/Item_Catalog.git catalog
 ```
-### Update Project Files and Setup database
+### Update Project Files 
 * Change directory to `/var/www/catalog/catalog`
 ```
 cd /var/www/catalog/catalog
@@ -300,12 +295,9 @@ engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 ```
 sudo mv application.py __init__.py
 ```
-* Setup the database :
-```
-python /var/www/catalog/catalog/database_setup.py 
-python /var/www/catalog/catalog/model.py 
-```
+
 ### Configure Apache2 Server
+
 * Installing Dependencies
 ```
 sudo apt install python-pip
@@ -367,11 +359,19 @@ sudo nano /etc/apache2/sites-available/catalog.conf
 sudo a2ensite catalog
 ```
 
+* Setup the database :
+
+```
+python /var/www/catalog/catalog/database_setup.py 
+python /var/www/catalog/catalog/model.py 
+```
+
 * Restart the apache server:
 
 ```
 sudo service apache2 restart
 ```
+
 * Visit site at : 
   * http://ec2-52-47-194-202.eu-west-3.compute.amazonaws.com/ 
   * http://52.47.194.202/
