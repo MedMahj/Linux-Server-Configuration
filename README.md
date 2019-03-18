@@ -18,7 +18,7 @@ The purpose of this project is take a baseline installation of a Linux distribut
 * Apache2 WSGI Mod
 * Git
 
-## summary of configurations made
+## Summary of configurations made
 ### Create Ubuntu VM Instance
 * Create an Amazon Lightsail instance using the OS Only + Ubuntu option.
 
